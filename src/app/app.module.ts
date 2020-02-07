@@ -14,7 +14,6 @@ import { CountryComponent } from './components/country/country.component';
 import { ROUTES } from './app.routes';
 import { SpotifyService } from './services/spotify.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
