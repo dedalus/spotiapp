@@ -11,7 +11,11 @@ export class SpotifyService {
   }
 
   getNewRelease(){
-    this.http.get("")
+
+    const headers = new HttpHeaders({
+      'Authorization':''
+    })
+    this.http.get("", { headers }  )
     .subscribe(data => {
 
     })
