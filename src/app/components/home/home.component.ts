@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from 'src/app/services/spotify.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-country',
@@ -11,11 +12,10 @@ export class HomeComponent  {
   nuevasCanciones : any[] = [];
   constructor( private spotify: SpotifyService) {
     this.spotify.getNewRelease()
-    .subscribe( (data: any) => {
-      console.log(data.albums.items);
-      this.nuevasCanciones = data.albums.items;
-
-    });
+        .subscribe( (data: any) => {
+          console.log(data);
+          this.nuevasCanciones = data;
+        });
   }
 
  
